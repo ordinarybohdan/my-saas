@@ -1,4 +1,6 @@
+import Button from "./components/Button";
 import Link from "next/link";
+import Counter from "./components/useState";
 
 export default function Home() {
   return (
@@ -7,11 +9,18 @@ export default function Home() {
         <p className="text-xl text-gray-500">
           The product I am going to build and ship.
         </p>
+        
+        {/* This is Buttone Learn More */}
         <Link href="about">
-          <button className="rounded-4xl bg-green-500 px-6 py-2 text-white font-semibold hover:bg-green-700">
-            Learn More
-          </button>
-        </Link>  
+          <Button label="Learn More" />
+        </Link>
+
+        {/* Counter Function: counting the user's clicks */}
+        {/* <Counter /> */}
+        
+        <p className="text-sm text-gray-300">
+          Presented by OrB.
+        </p>
      </main> 
   );
 }

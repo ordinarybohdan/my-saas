@@ -1,7 +1,7 @@
-export default function Button({label, color = "green"}){
+export default function Button({label, color = "white"}){
     return(
-        <button className={`rounded-4xl bg-${color}-500 px-6 py-3 text-white font-semibold hover:bg-${color}-700`}>
+        <button className={`rounded-4xl bg-${color} px-6 py-3 text-green-900 font-semibold hover:bg-green-900 hover:text-green-50`}>
             {label}
         </button>
-    );
+   );
 }

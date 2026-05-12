@@ -1,6 +1,7 @@
 import Button from "./components/Button";
 import Link from "next/link";
 import Counter from "./components/useState";
+import Products from "./products/page";
 
 export default function Home() {
   return (
@@ -10,17 +11,34 @@ export default function Home() {
           The product I am going to build and ship.
         </p>
         
-        {/* This is Buttone Learn More */}
-        <Link href="about">
-          <Button label="Learn More" />
-        </Link>
+        <div className="grid bg-transparent p-3 rounded-4xl content-center border border-black">
+            <div className="grid gap-3">
+              {/* This is Button Learn More */}
+              <Link href="sending">
+                <Button label="Learn More" />
+              </Link>
 
-        {/* Counter Function: counting the user's clicks */}
-        {/* <Counter /> */}
-        
+              {/* This is Button Users */}
+              <Link href="users">
+                <Button className="" label="Users"/>
+              </Link>
+
+              {/* This is Button About */}
+              <Link href="about">
+                <Button label="About"/>
+              </Link>
+
+              {/* This is Button Products */}
+              <Link href="products">
+                <Button className="" label="Products"/>
+              </Link>
+            </div>            
+        </div>
+      
         <p className="text-sm text-gray-300">
           Presented by OrB.
         </p>
-     </main> 
+     </main>
+      
   );
 }

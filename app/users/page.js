@@ -1,6 +1,7 @@
 "use client";
 import {useState, useEffect } from "react";
 import Button from "../components/Button";
+import ProductCard from "../components/ProductCard";
 
 export default function Users(){
     const [users, setUsers] = useState([]);
@@ -34,18 +35,18 @@ export default function Users(){
                 className="border rounded-lg px-4 py-2 w-full max-w-md mb-4"
             />
 
-            <div className="flex flex-col gap-4">
-                { filteredUsers.map((user) => (
-                    <div key={user.id} className="rounded-lg border p-4 shadow-sm">
-                        <p className="font-semibold text-lg">{user.name}</p>
-                        <p className="text-gray-500">{user.email}</p>
-                    </div>
-                ))}
+             <div className="grid grid-cols-2 gap-4">
+                    { filteredUsers.map((user) => (
+                        <div key={user.id} className="rounded-lg border p-4 shadow-sm">
+                            <p className="font-semibold text-lg">{user.name}</p>
+                            <p className="text-gray-500">{user.email}</p>
+                        </div>
+                    ))}
 
-                { filteredUsers.length === 0 && (
-                    <p className="text-gray-400 mt-4">No users found for {search}</p>
-                )}
-            </div>
+                    { filteredUsers.length === 0 && (
+                        <p className="text-gray-400 mt-4">No users found for {search}</p>
+                    )}
+                </div>
         </main>
     )
 }

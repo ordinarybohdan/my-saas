@@ -18,8 +18,22 @@ export default function Users(){
         });
     }, []);
 
-    if (loading) return <p className="p-8 text-gray-500"> Loading... </p>;
+    if (loading) return (
+        <main className="p-8">
+            <div className="flex flex-col gap-4">
+                {[1, 2, 3].map((n) => (
+                    <div key={n} className="h-16 rounded-lg bg-gray-200 animate-pulse"/>
+                ))}
+            </div>
+        </main>
+    ) 
+    // <p className="p-8 text-gray-500"> Loading... </p>;
     
+
+
+
+
+
     const filteredUsers = users.filter((user) =>
          user.name.toLowerCase().includes(search.toLowerCase())
         );

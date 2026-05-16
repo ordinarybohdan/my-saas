@@ -36,6 +36,11 @@ export default function Home() {
                   <Link href="products">
                     <Button label="Products"/>
                   </Link>
+
+                  {/* This is Button To-Do List */}
+                  <Link href="todos">
+                    <Button label="To Do List"/>
+                  </Link>
               </div>    
               <div>
                 {product.map((product) => (

@@ -14,7 +14,7 @@ export default function Products(){
                 <div className="flex items-start ">
                     <h1 className="text-5xl font-bold uppercase text-green-900 mb-15">Plans</h1>
                 </div>
-                <div className="flex flex-col-2 gap-3 mt-auto justify-center items-center">
+                <div className="flex flex-col-2 gap-3 mt-auto justify-center items-stretch">
                     {products.map((product) => (
                     <ProductCard key={product.id} product={product}/>
                     ))}

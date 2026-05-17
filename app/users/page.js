@@ -18,7 +18,8 @@ export default function Users(){
         });
     }, []);
 
-    if (loading) return (
+    if (loading) {
+        return (
         <main className="p-8">
             <div className="flex flex-col gap-4">
                 {[1, 2, 3].map((n) => (
@@ -26,13 +27,9 @@ export default function Users(){
                 ))}
             </div>
         </main>
-    ) 
+        ) 
+    }
     // <p className="p-8 text-gray-500"> Loading... </p>;
-    
-
-
-
-
 
     const filteredUsers = users.filter((user) =>
          user.name.toLowerCase().includes(search.toLowerCase())
